@@ -280,5 +280,89 @@ h1 {
 }
 
 
+@media (max-width: 767px) {
+
+    body {
+        margin: 0;
+        min-width: 340px;
+    }
+
+    .periodicTable {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        padding-top: 0;
+    }
+
+
+    .nobleGas,
+    .lanthanide,
+    .nonMetal,
+    .alkaliMetal,
+    .alkalineEarthMetal,
+    .metalloid,
+    .halogen,
+    .transitionMetal,
+    .postTransitionMetal,
+    .actinide {
+        width: 100%;
+        max-width: none;
+        min-width: none;
+        min-height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .nobleGas:hover,
+    .lanthanide:hover,
+    .nonMetal:hover,
+    .alkaliMetal:hover,
+    .alkalineEarthMetal:hover,
+    .metalloid:hover,
+    .halogen:hover,
+    .transitionMetal:hover,
+    .postTransitionMetal:hover,
+    .actinide:hover {
+        transform: scale(1.01);
+        border: 2px solid rgba(255, 255, 255, 0);
+    }
+
+    .blankRow1,
+    .blankRow2,
+    .blankRow3,
+    .blankRow4,
+    .blankRow5 {
+        display: none;
+    }
+
+    .elementTile {
+        display: flex;
+        align-items: center;
+
+    }
+    .elementNumber {
+        width: 10%;
+        text-align: center;
+        font-size: 1.2rem;
+        
+      }
+      
+      .elementSymbol {
+        width: 10%;
+        text-align: center;
+        font-size: 1.8rem;
+
+
+      }
+      
+      .elementName {
+        width: 70%;
+        padding-left: 5%;
+        font-size: 1.3rem;
+        transform: translateY(15%);
+        letter-spacing: 2px;
+
+      }
+
+}
 
   
