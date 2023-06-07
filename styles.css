@@ -279,7 +279,59 @@ h1 {
     grid-row:9/span 2;
 }
 
+@media (max-width: 767px) {
+  .modal {
+    width: 70%;
+    max-width: none;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(5, 5, 5);
+  }
 
+   .modalFactLabel{
+margin-top: 20px;
+  }
+
+  .modalInfo {
+    color: rgb(190, 190, 190);
+    font-size: .95rem;
+    font-weight: 100;
+    margin-left: 6px;
+
+  }
+
+  .elementFacts,
+  .elementHistory {
+    margin-left: 0;
+  }
+
+  .modalButton {
+    display: flex;
+    justify-content: center; /* Add this line */
+    align-items: center; /* Add this line */
+    width: 180px;
+    padding: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s;
+  }
+
+  .previousButton{
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  .closeButton {
+    top: 25px;
+    right: 25px;
+}
+  
+}
 
 
   
