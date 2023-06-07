@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap');
+
+
+body {
+    background-color:rgb(0, 0, 0);
+
+   /* HERE */
+        overflow-y: auto; /* Add vertical scroll if content exceeds the height */
+        overflow-x: auto; /* Enable horizontal scrolling */
+      
+}
+
+h1 {
+    /* HERE */
+    font-size: 2.2rem;
+    font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.728)  ;
+    letter-spacing: 2px;
+    text-shadow: 0 0 25px rgb(255, 255, 255);
+}
+
+
+/* Creating the table from the divs within the periodic table class, repeating columns until there are 18
+   also repeating rows until there are 10*/
+.periodicTable {
+    display: grid;
+    grid-template-columns: repeat(18, auto);
+    grid-template-rows:repeat(10, auto);
+    column-gap: 1px;
+    row-gap: 1px;
+    justify-content: center;
+    margin-top: 2rem;
+    
+    max-width: 100%;
+    height: auto;
+    
+}
+
+/* Grouping all of the elemental classes into one declaration so as not to have to do it for each one individually.
+    I added min and max widths based on the viewport to keep the blocks looking relatively symmetrical*/
+.nobleGas, .lanthanide, .nonMetal, .alkaliMetal, .alkalineEarthMetal, .metalloid, .halogen, .transitionMetal, .postTransitionMetal, .actinide {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    margin: 1px;
+    width: 60px;
+    max-width: 65px;
+    min-width: 55px;
+    height: auto;
+    
+}
+
+
+/* Changing the colour of each of the elemental classes */
+
+.nonMetal {
+    background-color: black;
+    color: rgb(251, 251, 137);
+    border-color: rgb(251, 251, 137);
+    transition: .2s;
+  }
+  
+  .nonMetal:hover {
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(251, 251, 137) 0%, rgb(238, 238, 238) 50%, rgb(251, 251, 137) 100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+  }
+  
+
+.nobleGas {
+    color: rgb(255, 162, 126);
+    border-color:rgb(255, 162, 126) ;
+    background-color: black;
+    transition: .2s;
+}
+
+.nobleGas:hover{
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(255, 162, 126) 0%, rgb(238, 238, 238) 50%, rgb(255, 162, 126) 100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.alkaliMetal {
+    color: rgb(204, 95, 95);
+    border-color:rgb(204, 95, 95) ;
+    background-color: black;
+    transition: .2s;
+}
+.alkaliMetal:hover {
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(204, 95, 95) 0%, rgb(238, 238, 238) 50%, rgb(204, 95, 95) 100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.alkalineEarthMetal {
+   color: rgb(141, 41, 235);
+   background-color: black;
+   border-color: rgb(141, 41, 235);
+   transition: .2s;
+}
+
+.alkalineEarthMetal:hover {
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(141, 41, 235) 0%, rgb(238, 238, 238) 50%, rgb(141, 41, 235) 100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.metalloid {
+    color: rgb(49, 169, 49);
+    background-color: black;
+    border-color: rgb(49, 169, 49);
+    transition: .2s;
+}
+.metalloid:hover {
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(49, 169, 49)0%, rgb(238, 238, 238) 50%, rgb(49, 169, 49)100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.postTransitionMetal {
+    color: rgb(161, 251, 27);
+    border-color:rgb(161, 251, 27) ;
+    background-color: black;
+    transition: .2s;
+}
+.postTransitionMetal:hover {
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(161, 251, 27)0%, rgb(238, 238, 238) 50%, rgb(161, 251, 27)100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.halogen {
+    color: rgb(218, 255, 54);
+    background-color: black;
+    border-color:rgb(218, 255, 54) ;
+    transition: .2s;
+}
+.halogen:hover {
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(218, 255, 54) 0%, rgb(238, 238, 238) 50%, rgb(218, 255, 54) 100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.transitionMetal {
+    color: rgb(71, 203, 247);
+    background-color: black;
+    border-color:rgb(71, 203, 247) ;
+    transition: .2s;
+}
+.transitionMetal:hover {
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(71, 203, 247)  0%, rgb(238, 238, 238) 50%, rgb(71, 203, 247)  100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.lanthanide {
+    color: rgb(82, 82, 236);
+    background-color: black;
+    border-color: rgb(82, 82, 236);
+    transition: .2s;
+}
+
+.lanthanide:hover {
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(82, 82, 236)   0%, rgb(238, 238, 238) 50%, rgb(82, 82, 236)   100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+    border: none;
+
+}
+
+.actinide {
+    color: rgb(244, 171, 60);
+    border-color: rgb(244, 171, 60);
+    background-color: black;
+    transition: .2s;
+}
+
+.actinide:hover {
+    color: black;
+    background-image: linear-gradient(to bottom right, rgb(244, 171, 60)   0%, rgb(238, 238, 238) 50%, rgb(244, 171, 60)   100%);
+    transform: scale(1.25);
+    transition: .2s;
+    cursor: pointer;
+        border: none;
+
+}
+
+/* Formatting the element number value */
+.elementNumber {
+    font-family:  'Courier New', Courier, monospace;
+    font-size: 10px;
+    font-weight:bold;
+    padding-top: 2px;
+    padding-left: 4px;
+}
+
+/* Formatting the element symbol - making the text relative to the screen width, so it stays large enough to read but doesnt distort the blocks */
+.elementSymbol {
+    font-family: 'Comfortaa', cursive, 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+/* Formatting the element name */
+.elementName {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: .55rem;
+    letter-spacing: .2px;
+    padding-bottom: 3px;
+    padding-left: 1px;
+    font-weight: 100;
+    overflow: hidden;
+}
+
+/* adding the blank space on the top row of the table using a blank div */
+.blankRow1 {
+    grid-column: 2/span 16;
+    grid-row: 1;
+}
+
+/* adding the blank space on the second row of the table using a blank div */
+.blankRow2 {
+    grid-column: 3/span 10;
+    grid-row: 2/span 2;
+}
+
+/* adding the blank space in the 3rd column, spanning 6th and 7th rows using a blank div */
+.blankRow3 {
+    grid-column: 3;
+    grid-row: 6/span 2;
+}
+
+/* adding the blank row in row 8 of the table to give the space between row 7 and 9 */
+.blankRow4 {
+    grid-column: 1/span 18;
+    grid-row: 8;
+    margin: 6px;
+}
+
+
+/* Adding the space at the bottom left of the table */
+.blankRow5 {
+    grid-column: 1/span 3;
+    grid-row:9/span 2;
+}
+
+
+
+
+  

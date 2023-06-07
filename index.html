@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Periodic Table</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <link href="./styles2.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+
+    <div class="modalContainer">
+        <div class="modal">
+            <div class="modalHeadingContainer">
+                <div class="modalElementSymbol"></div>
+                <div class="modalHeading elementHeading"></div>
+            </div>
+            <div class="infoSection">
+                <div class="modalLabel">Atomic number:<span class=" modalInfo atomicNumber"></span></div>
+                <div class="modalLabel">Elemental Group:<span class=" modalInfo elementalGroup"></span></div>
+                <div class="modalLabel">Standard State:<span class=" modalInfo elementState"></span></div>
+                <div class="modalLabel">Year discovered:<span class=" modalInfo yearDiscovered"></span></div>
+                <div class="modalLabel modalFactLabel">Element Facts:
+                    <p class="modalInfo elementFacts"></p>
+                </div>
+                <div class="modalLabel">Element history:
+                    <p class="modalInfo elementHistory">
+                    </p>
+                </div>
+
+
+            </div>
+            <button class="modalButton previousButton">Previous Element</button>
+            <button class="modalButton nextButton">Next Element</button>
+            <button class=" closeButton">&#x2715</button>
+        </div>
+    </div>
+
+
+    <header>
+        <h1>PERIODIC TABLE OF ELEMENTS</h1>
+    </header>
+
+
+    <!-- container for periodic table -->
+    <div class="periodicTable" id="displayTable">
+
+        <!--
+               - Creating several hundred divs for your enjoyment (I actually didn't mind this)
+               - I added titles to give the user the elemental class when they hover their pointer over it
+               - I made each of the main divs below to represent a cell in the table, containing all relevant info.
+            -->
+        <div class="nonMetal elementTile" title="Non-Metal">
+            <div class="elementNumber">1</div>
+            <div class="elementSymbol">H</div>
+            <div class="elementName">Hydrogen</div>
+        </div>
+
+
+        <div class="nobleGas elementTile" title="Noble Gas">
+            <div class="elementNumber">2</div>
+            <div class="elementSymbol">He</div>
+            <div class="elementName">Helium</div>
+        </div>
+
+        <div class="alkaliMetal elementTile" title="Alkali Metal">
+            <div class="elementNumber">3</div>
+            <div class="elementSymbol">Li</div>
+            <div class="elementName">Lithium</div>
+        </div>
+
+        <div class="alkalineEarthMetal elementTile" title="Alkaline Earth Metal">
+            <div class="elementNumber">4</div>
+            <div class="elementSymbol">Be</div>
+            <div class="elementName">Berilium</div>
+        </div>
+
+        <div class="metalloid elementTile" title="Metalloid">
+            <div class="elementNumber">5</div>
+            <div class="elementSymbol">B</div>
+            <div class="elementName">Boron</div>
+        </div>
+
+        <div class="nonMetal elementTile" title="Non-Metal">
+            <div class="elementNumber">6</div>
+            <div class="elementSymbol">C</div>
+            <div class="elementName">Carbon</div>
+        </div>
+
+        <div class="nonMetal elementTile" title="Non-Metal">
+            <div class="elementNumber">7</div>
+            <div class="elementSymbol">N</div>
+            <div class="elementName">Nitrogen</div>
+        </div>
+
+        <div class="nonMetal elementTile" title="Non-Metal">
+            <div class="elementNumber">8</div>
+            <div class="elementSymbol">O</div>
+            <div class="elementName">Oxygen</div>
+        </div>
+
+        <div class="halogen elementTile" title="Halogen">
+            <div class="elementNumber">9</div>
+            <div class="elementSymbol">F</div>
+            <div class="elementName">Fluorine</div>
+        </div>
+
+        <div class="nobleGas elementTile" title="Noble Gas">
+            <div class="elementNumber">10</div>
+            <div class="elementSymbol">Ne</div>
+            <div class="elementName">Neon</div>
+        </div>
+
+        <div class="alkaliMetal elementTile" title="Alkali Metal">
+            <div class="elementNumber">11</div>
+            <div class="elementSymbol">Na</div>
+            <div class="elementName">Sodium</div>
+        </div>
+
+        <div class="alkalineEarthMetal elementTile" title="Alkaline Earth Metal">
+            <div class="elementNumber">12</div>
+            <div class="elementSymbol">Mg</div>
+            <div class="elementName">Magnesium</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">13</div>
+            <div class="elementSymbol">Al</div>
+            <div class="elementName">Aluminium</div>
+        </div>
+
+        <div class="metalloid elementTile" title="Metalloid">
+            <div class="elementNumber">14</div>
+            <div class="elementSymbol">Si</div>
+            <div class="elementName">Silicon</div>
+        </div>
+
+        <div class="nonMetal elementTile" title="Non-Metal">
+            <div class="elementNumber">15</div>
+            <div class="elementSymbol">P</div>
+            <div class="elementName">Phosphorus</div>
+        </div>
+
+        <div class="nonMetal elementTile" title="Non-Metal">
+            <div class="elementNumber">16</div>
+            <div class="elementSymbol">S</div>
+            <div class="elementName">Sulfur</div>
+        </div>
+
+        <div class="halogen elementTile" title="Halogen">
+            <div class="elementNumber">17</div>
+            <div class="elementSymbol">Cl</div>
+            <div class="elementName">Chlorine</div>
+        </div>
+
+        <div class="nobleGas elementTile" title="Noble Gas">
+            <div class="elementNumber">18</div>
+            <div class="elementSymbol">Ar</div>
+            <div class="elementName">Argon</div>
+        </div>
+
+        <div class="alkaliMetal elementTile" title="Alkali Metal">
+            <div class="elementNumber">19</div>
+            <div class="elementSymbol">K</div>
+            <div class="elementName">Potasium</div>
+        </div>
+
+        <div class="alkalineEarthMetal elementTile" title="Alkaline Earth Metal">
+            <div class="elementNumber">20</div>
+            <div class="elementSymbol">Ca</div>
+            <div class="elementName">Calcium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">21</div>
+            <div class="elementSymbol">Sc</div>
+            <div class="elementName">Scandium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">22</div>
+            <div class="elementSymbol">Ti</div>
+            <div class="elementName">Titatium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">23</div>
+            <div class="elementSymbol">V</div>
+            <div class="elementName">Vanadium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">24</div>
+            <div class="elementSymbol">Cr</div>
+            <div class="elementName">Chromium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">25</div>
+            <div class="elementSymbol">Mn</div>
+            <div class="elementName">Manganese</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">26</div>
+            <div class="elementSymbol">Fe</div>
+            <div class="elementName">Iron</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">27</div>
+            <div class="elementSymbol">Co</div>
+            <div class="elementName">Cobalt</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">28</div>
+            <div class="elementSymbol">Ni</div>
+            <div class="elementName">Nickel</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">29</div>
+            <div class="elementSymbol">Cu</div>
+            <div class="elementName">Copper</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">30</div>
+            <div class="elementSymbol">Zn</div>
+            <div class="elementName">Zinc</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">31</div>
+            <div class="elementSymbol">Ga</div>
+            <div class="elementName">Gallium</div>
+        </div>
+
+        <div class="metalloid elementTile" title="Metalloid">
+            <div class="elementNumber">32</div>
+            <div class="elementSymbol">Ge</div>
+            <div class="elementName">Germanium</div>
+        </div>
+
+        <div class="metalloid elementTile" title="Metalloid">
+            <div class="elementNumber">33</div>
+            <div class="elementSymbol">As</div>
+            <div class="elementName">Arsenic</div>
+        </div>
+
+        <div class="nonMetal elementTile" title="Non-Metal">
+            <div class="elementNumber">34</div>
+            <div class="elementSymbol">Se</div>
+            <div class="elementName">Selenium</div>
+        </div>
+
+        <div class="halogen elementTile" title="Halogen">
+            <div class="elementNumber">35</div>
+            <div class="elementSymbol">Br</div>
+            <div class="elementName">Bromine</div>
+        </div>
+
+        <div class="nobleGas elementTile" title="Noble Gas">
+            <div class="elementNumber">36</div>
+            <div class="elementSymbol">Kr</div>
+            <div class="elementName">Krypton</div>
+        </div>
+
+        <div class="alkaliMetal elementTile" title="Alkali Metal">
+            <div class="elementNumber">37</div>
+            <div class="elementSymbol">Rb</div>
+            <div class="elementName">Rubidium</div>
+        </div>
+
+        <div class="alkalineEarthMetal elementTile" title="Alkaline Earth Metal">
+            <div class="elementNumber">38</div>
+            <div class="elementSymbol">Sr</div>
+            <div class="elementName">Strontium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">39</div>
+            <div class="elementSymbol">Y</div>
+            <div class="elementName">Ytrium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">40</div>
+            <div class="elementSymbol">Zr</div>
+            <div class="elementName">Zirconium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">41</div>
+            <div class="elementSymbol">Nb</div>
+            <div class="elementName">Niobium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">42</div>
+            <div class="elementSymbol">Mo</div>
+            <div class="elementName">Molybdenum</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">43</div>
+            <div class="elementSymbol">Tc</div>
+            <div class="elementName">Technetium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">44</div>
+            <div class="elementSymbol">Ru</div>
+            <div class="elementName">Ruthenium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">45</div>
+            <div class="elementSymbol">Rh</div>
+            <div class="elementName">Rhodium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">46</div>
+            <div class="elementSymbol">Pd</div>
+            <div class="elementName">Palladium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">47</div>
+            <div class="elementSymbol">Ag</div>
+            <div class="elementName">Silver</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">48</div>
+            <div class="elementSymbol">Cd</div>
+            <div class="elementName">Cadmium</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">49</div>
+            <div class="elementSymbol">In</div>
+            <div class="elementName">Indium</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">50</div>
+            <div class="elementSymbol">Sn</div>
+            <div class="elementName">Tin</div>
+        </div>
+
+        <div class="metalloid elementTile" title="Metalloid">
+            <div class="elementNumber">51</div>
+            <div class="elementSymbol">Sb</div>
+            <div class="elementName">Antimony</div>
+        </div>
+
+        <div class="metalloid elementTile" title="Metalloid">
+            <div class="elementNumber">52</div>
+            <div class="elementSymbol">Te</div>
+            <div class="elementName">Tellurium</div>
+        </div>
+
+        <div class="halogen elementTile" title="Halogen">
+            <div class="elementNumber">53</div>
+            <div class="elementSymbol">I</div>
+            <div class="elementName">Iodine</div>
+        </div>
+
+        <div class="nobleGas elementTile" title="Noble Gas">
+            <div class="elementNumber">54</div>
+            <div class="elementSymbol">Xe</div>
+            <div class="elementName">Xenon</div>
+        </div>
+
+        <div class="alkaliMetal elementTile" title="Alkali Metal">
+            <div class="elementNumber">55</div>
+            <div class="elementSymbol">Cs</div>
+            <div class="elementName">Ceasium</div>
+        </div>
+
+        <div class="alkalineEarthMetal elementTile" title="Alkaline Earth Metal">
+            <div class="elementNumber">56</div>
+            <div class="elementSymbol">Ba</div>
+            <div class="elementName">Barium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">72</div>
+            <div class="elementSymbol">Hf</div>
+            <div class="elementName">Hafnium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">73</div>
+            <div class="elementSymbol">Ta</div>
+            <div class="elementName">Tantalum</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">74</div>
+            <div class="elementSymbol">W</div>
+            <div class="elementName">Tungsten</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">75</div>
+            <div class="elementSymbol">Re</div>
+            <div class="elementName">Rhenium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">76</div>
+            <div class="elementSymbol">Os</div>
+            <div class="elementName">Osnium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">77</div>
+            <div class="elementSymbol">Ir</div>
+            <div class="elementName">Iridium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">78</div>
+            <div class="elementSymbol">Pt</div>
+            <div class="elementName">Platinum</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">79</div>
+            <div class="elementSymbol">Au</div>
+            <div class="elementName">Gold</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">80</div>
+            <div class="elementSymbol">Hg</div>
+            <div class="elementName">Mercury</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">81</div>
+            <div class="elementSymbol">Tl</div>
+            <div class="elementName">Thallium</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">82</div>
+            <div class="elementSymbol">Pb</div>
+            <div class="elementName">Lead</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">83</div>
+            <div class="elementSymbol">Bi</div>
+            <div class="elementName">Bismuth</div>
+        </div>
+
+        <div class="metalloid elementTile" title="Metalloid">
+            <div class="elementNumber">84</div>
+            <div class="elementSymbol">Po</div>
+            <div class="elementName">Polonium</div>
+        </div>
+
+        <div class="halogen elementTile" title="Halogen">
+            <div class="elementNumber">85</div>
+            <div class="elementSymbol">At</div>
+            <div class="elementName">Astatine</div>
+        </div>
+
+        <div class="nobleGas elementTile" title="Noble Gas">
+            <div class="elementNumber">86</div>
+            <div class="elementSymbol">Rn</div>
+            <div class="elementName">Radon</div>
+        </div>
+
+        <div class="alkaliMetal elementTile" title="Alkali Metal">
+            <div class="elementNumber">87</div>
+            <div class="elementSymbol">Fr</div>
+            <div class="elementName">Francium</div>
+        </div>
+
+        <div class="alkalineEarthMetal elementTile" title="Alkaline Earth Metal">
+            <div class="elementNumber">88</div>
+            <div class="elementSymbol">Ra</div>
+            <div class="elementName">Radium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">104</div>
+            <div class="elementSymbol">Rf</div>
+            <div class="elementName">Rutherfordium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">105</div>
+            <div class="elementSymbol">Db</div>
+            <div class="elementName">Dubnium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">106</div>
+            <div class="elementSymbol">Sg</div>
+            <div class="elementName">Seaborgium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">107</div>
+            <div class="elementSymbol">Bh</div>
+            <div class="elementName">Bohrium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">108</div>
+            <div class="elementSymbol">Hs</div>
+            <div class="elementName">Hassium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">109</div>
+            <div class="elementSymbol">Mt</div>
+            <div class="elementName">Meitnerium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">110</div>
+            <div class="elementSymbol">Ds</div>
+            <div class="elementName">Darmstadtium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">111</div>
+            <div class="elementSymbol">Rg</div>
+            <div class="elementName">Roentgenium</div>
+        </div>
+
+        <div class="transitionMetal elementTile" title="Transition Metal">
+            <div class="elementNumber">112</div>
+            <div class="elementSymbol">Cn</div>
+            <div class="elementName">Copernicium</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">113</div>
+            <div class="elementSymbol">Nh</div>
+            <div class="elementName">Nihonium</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">114</div>
+            <div class="elementSymbol">Fl</div>
+            <div class="elementName">Flerovium</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">115</div>
+            <div class="elementSymbol">Mc</div>
+            <div class="elementName">Moscovium</div>
+        </div>
+
+        <div class="postTransitionMetal elementTile" title="Post Transition Metal">
+            <div class="elementNumber">116</div>
+            <div class="elementSymbol">Lv</div>
+            <div class="elementName">Livermorium</div>
+        </div>
+
+        <div class="halogen elementTile" title="Halogen">
+            <div class="elementNumber">117</div>
+            <div class="elementSymbol">Ts</div>
+            <div class="elementName">Tennessine</div>
+        </div>
+
+        <div class="nobleGas elementTile" title="Noble Gas">
+            <div class="elementNumber">118</div>
+            <div class="elementSymbol">Og</div>
+            <div class="elementName">Oganesson</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">57</div>
+            <div class="elementSymbol">La</div>
+            <div class="elementName">Lanthanum</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">58</div>
+            <div class="elementSymbol">Ce</div>
+            <div class="elementName">Cerium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">59</div>
+            <div class="elementSymbol">Pr</div>
+            <div class="elementName">Praseodymium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">60</div>
+            <div class="elementSymbol">Nd</div>
+            <div class="elementName">Neodymium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">61</div>
+            <div class="elementSymbol">Pm</div>
+            <div class="elementName">Promethium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">62</div>
+            <div class="elementSymbol">Sm</div>
+            <div class="elementName">Samarium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">63</div>
+            <div class="elementSymbol">Eu</div>
+            <div class="elementName">Europium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">64</div>
+            <div class="elementSymbol">Gd</div>
+            <div class="elementName">Gadolinium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">65</div>
+            <div class="elementSymbol">Tb</div>
+            <div class="elementName">Terbium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">66</div>
+            <div class="elementSymbol">Dy</div>
+            <div class="elementName">Dyprosium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">67</div>
+            <div class="elementSymbol">Ho</div>
+            <div class="elementName">Holmium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">68</div>
+            <div class="elementSymbol">Er</div>
+            <div class="elementName">Erbium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">69</div>
+            <div class="elementSymbol">Tm</div>
+            <div class="elementName">Thulium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">70</div>
+            <div class="elementSymbol">Yb</div>
+            <div class="elementName">Ytterbium</div>
+        </div>
+
+        <div class="lanthanide elementTile" title="Lanthanide">
+            <div class="elementNumber">71</div>
+            <div class="elementSymbol">Lu</div>
+            <div class="elementName">Lutetium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">89</div>
+            <div class="elementSymbol">Ac</div>
+            <div class="elementName">Actinium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">90</div>
+            <div class="elementSymbol">Th</div>
+            <div class="elementName">Thorium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">91</div>
+            <div class="elementSymbol">Pa</div>
+            <div class="elementName">Protactinium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">92</div>
+            <div class="elementSymbol">U</div>
+            <div class="elementName">Uranium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">93</div>
+            <div class="elementSymbol">Np</div>
+            <div class="elementName">Neptunium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">94</div>
+            <div class="elementSymbol">Pu</div>
+            <div class="elementName">Plutonium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">95</div>
+            <div class="elementSymbol">Am</div>
+            <div class="elementName">Americium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">96</div>
+            <div class="elementSymbol">Cm</div>
+            <div class="elementName">Curium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">97</div>
+            <div class="elementSymbol">Bk</div>
+            <div class="elementName">Berkelium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">98</div>
+            <div class="elementSymbol">Cf</div>
+            <div class="elementName">Californium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">99</div>
+            <div class="elementSymbol">Es</div>
+            <div class="elementName">Einsteinium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">100</div>
+            <div class="elementSymbol">Fm</div>
+            <div class="elementName">Fermium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">101</div>
+            <div class="elementSymbol">Md</div>
+            <div class="elementName">Mendelevium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">102</div>
+            <div class="elementSymbol">No</div>
+            <div class="elementName">Nobelium</div>
+        </div>
+
+        <div class="actinide elementTile" title="Actinide">
+            <div class="elementNumber">103</div>
+            <div class="elementSymbol">Lr</div>
+            <div class="elementName">Lawrencium</div>
+        </div>
+
+
+        <!--
+                Adding black divs to allow me to space out sections of the final table
+            -->
+        <div class="blankRow1"></div>
+        <div class="blankRow2"></div>
+        <div class="blankRow3"></div>
+        <div class="blankRow4"></div>
+        <div class="blankRow5"></div>
+
+    </div>
+
+    <!--
+            Adding the picture that will be displayed when the screen is made smaller
+        -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.0/purify.min.js"></script>
+    <script src="./app.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+<!--
+REFERENCES
+
+- The periodic table provided, I used the same Elemental classes/groups
+    https://pubchem.ncbi.nlm.nih.gov/periodic-table/
