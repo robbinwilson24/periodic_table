@@ -14,11 +14,10 @@ This is a full periodic table of elements. The initial version of this was a sim
 I have added additional elements in the form of a modal pop-up that contains information obtained from an API call. The page is visually appealing and functional. However, at present, it is best viewed on larger screens and may not function properly on Internet Explorer. I will work on making it responsive in the future.
 
 ### Main page:
-![image](https://github.com/robbinwilson24/periodic-table/assets/123034061/bd98798c-d7bd-4656-8900-896bd9cd7880)
-
+![image](https://github.com/robbinwilson24/periodic_table/assets/123034061/a0e7bdc6-ad04-482d-a511-8be82fbeb6f8)
 
 ### Modal:
-![image](https://github.com/robbinwilson24/periodic-table/assets/123034061/9a6b99c6-274b-4b3e-8918-0e8fb3f70a7b)
+![image](https://github.com/robbinwilson24/periodic_table/assets/123034061/7106373e-b107-4fd1-9ab2-29f283d055b4)
 
 
 ## Features <a name="features"></a>
